@@ -1,15 +1,28 @@
-import klMaxEllProCom from './klMaxEllPro/index.vue';
-import klMaxEllPro from './klMaxEllPro/index.js';
+const result = {};
+const install = (Vue) => {
+  const requireComponent = require.context("./", true, /\.vue$/);
+  requireComponent.keys().forEach((fileName) => {
+    // 获取组件配置
+    const componentConfig = requireComponent(fileName);
+    // 获取组件的 PascalCase 命名
+    const componentName = fileName
+      .split("/")
+      .pop()
+      .replace(/\.\w+$/, "");
 
-const component = [klMaxEllProCom]
+    const component = componentConfig.default || componentConfig;
 
-const install = (Vue) =>{
-  component.map(item =>{
-    Vue.component(item.name, item)
+    // 全局注册组件
+    Vue.component(componentName, component);
+
+    result[componentName] = {
+      install: function (Vue) {
+        Vue.component(componentName, component);
+      },
+    };
   })
-}
+};
 
-export default {
-  install,
-  klMaxEllPro
-}
+// 定义install方法
+result.install = install;
+export default result;

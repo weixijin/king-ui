@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-      <klMaxEllPro1 class="box">{{str.slice(0,100)}}</klMaxEllPro1>
+      <klMaxEllPro class="box">{{str.slice(0,100)}}</klMaxEllPro>
+      <kl-move-to>
+        <button>111</button>
+      </kl-move-to>
+      5555
   </div>
 </template>
 
 <script>
-import klMaxEllPro1 from "../dist/klMaxEllPro.umd.js";
 export default {
   components: {
-    klMaxEllPro1,
   },
   data(){
     return {
