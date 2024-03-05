@@ -1,7 +1,7 @@
-import klMaxEllPro from './klMaxEllPro/index.vue';
-import klMaxEllProJs from './klMaxEllPro/index.js';
+import klMaxEllProCom from './klMaxEllPro/index.vue';
+import klMaxEllPro from './klMaxEllPro/index.js';
 
-const component = [klMaxEllPro]
+const component = [klMaxEllProCom]
 
 const install = (Vue) =>{
   component.map(item =>{
@@ -11,5 +11,5 @@ const install = (Vue) =>{
 
 export default {
   install,
-  klMaxEllProJs
+  klMaxEllPro
 }
