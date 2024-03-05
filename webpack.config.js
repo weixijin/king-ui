@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].umd.js',
-    library: 'wxj-ui', // 组件库
+    library: 'king-ui', // 组件库
     libraryTarget: 'umd'
   },
   module: {
