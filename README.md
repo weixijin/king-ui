@@ -24,9 +24,8 @@ Object.keys(kingUiPro.klFun).forEach((key) => {
 ### 按需注入
 
 ```
-import kingUiPro from "./components/index.js"
+import {klMaxEllPro,klMoveTo,klFun} from "./components/index.js"
 
-let {klMaxEllPro,klMoveTo,klFun} = kingUiPro
 // 挂载工具函数
 Object.keys(klFun).forEach((key) => {
   Vue.prototype[key] = klFun[key]; 

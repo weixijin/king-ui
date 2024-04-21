@@ -1,14 +1,13 @@
 import * as funs from "../utils/tool.js";
 // 单个引入，支持按需引入
-import klMaxEllPro from './klMaxEllPro/klMaxEllPro.js';
-import klMoveTo from './klMoveTo/klMoveTo.js';
+import klMaxEllProJs from './klMaxEllPro/klMaxEllPro.js';
+import klMoveToJs from './klMoveTo/klMoveTo.js';
 
-const result = {
-  klMaxEllPro,
-  klMoveTo
-};
+export const klFun = funs;
+export const klMaxEllPro = klMaxEllProJs;
+export const klMoveTo = klMoveToJs;
 
-result.klFun = funs;
+const result = {}
 
 const install = (Vue) => {
   const requireComponent = require.context("./", true, /\.vue$/);
@@ -37,3 +36,4 @@ const install = (Vue) => {
 // 定义install方法
 result.install = install;
 export default result;
+
