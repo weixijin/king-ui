@@ -57,6 +57,7 @@ export default {
             }
         },
         getZhanweiStyle() {
+            // 将按钮挤到底部
             return {
                 height: `calc(100% - ${this.btnHeight}px)`,
             }

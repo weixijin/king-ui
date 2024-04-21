@@ -1,3 +1,5 @@
+// import * as funs from "../utils/tool.js";
+
 const result = {};
 const install = (Vue) => {
   const requireComponent = require.context("./", true, /\.vue$/);
@@ -20,7 +22,12 @@ const install = (Vue) => {
         Vue.component(componentName, component);
       },
     };
-  })
+
+    // 挂载工具函数
+    // Object.keys(funs).forEach((key) => {
+    //   result[key] = arr[key];
+    // });
+  });
 };
 
 // 定义install方法
