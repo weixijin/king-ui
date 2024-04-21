@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].umd.js',
-    library: 'king-ui', // 组件库
+    library: 'king-ui-pro', // 组件库
     libraryTarget: 'umd'
   },
   module: {
