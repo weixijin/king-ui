@@ -8,7 +8,8 @@ module.exports = {
     // 全部
     index: './src/components/index.js',
     // 单个
-    // klMaxEllPro: './src/components/klMaxEllPro/index.js',
+    klMaxEllPro: './src/components/klMaxEllPro/klMaxEllPro.js',
+    klMoveTo: './src/components/klMoveTo/klMoveTo.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

@@ -1,48 +1,37 @@
-# yizheng-ui
+# king-ui-pro
 
-## 快速开始
-> 有任何问题，可以联系我微信yizheng369  
-> 源码地址：https://gitee.com/618859/yizheng-ui  
-> 开发详情视频 https://www.bilibili.com/video/BV1Zf4y1u75o?p=9&vd_source=125d808bbbad2b8400f221b816a0f674  
+安装组件库
 
-
-### 1.安装组件库
 ```
-npm i yizheng-ui
+npm i king-ui-pro@latest -S
 ```
 
-### 2.引用组件库
-```
-// 全局引入
-import YizUI from 'yizheng-ui'
-Vue.use(YizUI)
+## 引用组件库
 
-// 部分引入
-import { Card } from 'yiz-ui'
-Vue.use(Card)
-```
+### 全局注入
 
-### 3.页面上使用组件库
 ```
-<template>
-  <div id="app">
-    <mytitle></mytitle>
-  </div>
-</template>
+import kingUiPro from 'king-ui-pro'
+// 全局注入king-ui-pro组件
+Vue.use(kingUiPro)
 
-<script>
-export default {
-  name: 'app',
-}
-</script>
+// 全局注入king-ui-pro方法
+Object.keys(kingUiPro.klFun).forEach((key) => {
+    Vue.prototype[key] = kingUiPro.klFun[key]; 
+});
 ```
 
-### 4.关于发布npm的vue包
-太酷了-2023.09.10
-```
-npm run build
-npm version patch
-npm login
-npm publish
-```
+### 按需注入
 
+```
+import kingUiPro from "./components/index.js"
+
+let {klMaxEllPro,klMoveTo,klFun} = kingUiPro
+// 挂载工具函数
+Object.keys(klFun).forEach((key) => {
+  Vue.prototype[key] = klFun[key]; 
+});
+
+Vue.use(klMaxEllPro)
+Vue.use(klMoveTo)
+```

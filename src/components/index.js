@@ -1,11 +1,14 @@
 import * as funs from "../utils/tool.js";
+// 单个引入，支持按需引入
+import klMaxEllPro from './klMaxEllPro/klMaxEllPro.js';
+import klMoveTo from './klMoveTo/klMoveTo.js';
 
-const result = {};
+const result = {
+  klMaxEllPro,
+  klMoveTo
+};
 
-// 挂载工具函数
-Object.keys(funs).forEach((key) => {
-  result[key] = arr[key];
-});
+result.klFun = funs;
 
 const install = (Vue) => {
   const requireComponent = require.context("./", true, /\.vue$/);

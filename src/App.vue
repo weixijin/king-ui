@@ -1,9 +1,9 @@
 <template>
   <div id="app">
       <klMaxEllPro class="box">{{str.slice(0,100)}}</klMaxEllPro>
-      <kl-move-to>
+      <klMoveTo>
         <button>111</button>
-      </kl-move-to>
+      </klMoveTo>
       5555
   </div>
 </template>
@@ -17,6 +17,9 @@ export default {
       str: '是否会不保护花属虎发生蛋白hi实际上地方hi疏忽是否会不保护花属虎发生蛋白hi实际上地方hi疏忽是否会不保护花属虎发生蛋白hi实际上地方hi疏忽是否会不保护花属虎发生蛋白hi实际上地方hi疏忽是否会不保护花属虎发生蛋白hi实际上地方hi疏忽是否会不保护花属虎发生蛋白hi实际上地方hi疏忽是否会不保护花属虎发生蛋白hi实际上地方hi疏忽'
     }
   
+  },
+  created(){
+    console.log(this.ceshifun(555))
   }
 };
 </script>

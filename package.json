@@ -1,6 +1,6 @@
 {
   "name": "king-ui-pro",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "author": "weixijin",
   "description": "vue compnent组件库",
   "main": "dist/index.umd.js",
