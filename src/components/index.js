@@ -1,6 +1,12 @@
-// import * as funs from "../utils/tool.js";
+import * as funs from "../utils/tool.js";
 
 const result = {};
+
+// 挂载工具函数
+Object.keys(funs).forEach((key) => {
+  result[key] = arr[key];
+});
+
 const install = (Vue) => {
   const requireComponent = require.context("./", true, /\.vue$/);
   requireComponent.keys().forEach((fileName) => {
@@ -22,11 +28,6 @@ const install = (Vue) => {
         Vue.component(componentName, component);
       },
     };
-
-    // 挂载工具函数
-    // Object.keys(funs).forEach((key) => {
-    //   result[key] = arr[key];
-    // });
   });
 };
 
