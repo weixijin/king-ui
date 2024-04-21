@@ -14,11 +14,6 @@ npm i king-ui-pro@latest -S
 import kingUiPro from 'king-ui-pro'
 // 全局注入king-ui-pro组件
 Vue.use(kingUiPro)
-
-// 全局注入king-ui-pro方法
-Object.keys(kingUiPro.klFun).forEach((key) => {
-    Vue.prototype[key] = kingUiPro.klFun[key]; 
-});
 ```
 
 ### 按需注入
